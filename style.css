@@ -1,0 +1,279 @@
+:root {
+  --clr-button-one: hsl(171, 66%, 44%);
+  --clr-button-one-light: hsl(171, 70%, 53%);
+  --clr-button-two: hsl(233, 100%, 69%);
+  --clr-button-two-light: hsl(233, 91%, 77%);
+  --title-colour: hsl(210, 10%, 33%);
+  --text-colour: hsl(201, 11%, 66%);
+  --ff-primary: 'Bai Jamjuree', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+img,
+footer {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  color: var(--title-colour);
+}
+p {
+  color: var(--text-colour);
+}
+
+body {
+  background-image: url(images/bg-header-mobile.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  font-family: var(--ff-primary);
+  font-size: 16px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 8rem;
+  padding-inline: 2rem;
+}
+
+.mid {
+  text-align: center;
+  padding-inline: 2rem;
+  padding-bottom: 8rem;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  gap: 8rem;
+  margin: auto auto;
+  padding-inline: 2rem;
+}
+
+.one {
+  padding-top: 5rem;
+}
+
+.section-one-title {
+  padding-top: 2.5rem;
+}
+
+.section-two-intro {
+  text-align: center;
+}
+
+.description {
+  padding-block: 1.5rem;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+.feature-box {
+  padding-top: 1.5rem;
+}
+.content {
+  padding-block: 1rem;
+}
+.text {
+  padding-inline: 2rem;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.4rem; */
+  justify-content: center;
+  width: min(80% 275px);
+  padding-top: 1rem;
+}
+
+.btn {
+  /* margin: 0 auto; */
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  color: #ffffff;
+  padding: 15px 65px 15px 65px;
+  text-decoration: none;
+}
+
+.green {
+  -webkit-box-shadow: 0px 0px 3px hsl(171, 63%, 41%);
+  -moz-box-shadow: 0px 0px 3px hsl(171, 63%, 41%);
+  box-shadow: 0px 0px 3px hsl(171, 63%, 41%);
+  background: var(--clr-button-one);
+  margin-bottom: 1rem;
+}
+
+.green:hover {
+  background: var(--clr-button-one-light);
+  text-decoration: none;
+}
+
+.blue {
+  -webkit-box-shadow: 0px 0px 3px hsl(233, 98%, 64%);
+  -moz-box-shadow: 0px 0px 3px hsl(233, 98%, 64%);
+  box-shadow: 0px 0px 3px hsl(233, 98%, 64%);
+  background: var(--clr-button-two);
+  margin-bottom: 1rem;
+}
+
+.blue:hover {
+  background: var(--clr-button-two-light);
+  text-decoration: none;
+}
+
+.computer-image {
+  padding-block: 2rem;
+  width: 100%;
+}
+
+.smartdevice-image {
+  padding-top: 2rem;
+}
+
+.five {
+  display: grid;
+  justify-content: center;
+  gap: 4rem;
+}
+
+/* .five img {
+  max-width: min(50%, 200px);
+} */
+
+.icon {
+  padding-block: 2rem;
+}
+
+.footer-container {
+  background-color: #eeebeb;
+  padding-bottom: 1rem;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.logo-two {
+  margin: 0 auto;
+  padding-block: 2rem;
+  max-width: min(15%, 50px);
+}
+ul {
+  display: grid;
+  /* display: flex;
+  flex-direction: column; */
+  list-style-type: none;
+  padding: 0 0 2rem 0;
+  gap: 1.5rem;
+}
+
+li {
+  font-weight: 600;
+  color: var(--title-colour);
+}
+
+.foot-icon img {
+  margin-inline: 1rem;
+}
+
+li:hover {
+  color: var(--clr-button-one);
+}
+
+@media (min-width: 43.75em) {
+  body {
+    background-image: url(images/bg-header-desktop.png);
+  }
+  .button-box {
+    flex-direction: row;
+    gap: 2rem;
+    /* justify-content: flex-end; */
+  }
+  .mid {
+    padding-inline: 0;
+    min-height: 500px;
+  }
+
+  .section-two-content {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+  }
+
+  .section-two-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-right: 1rem;
+  }
+
+  .description {
+    width: 55%;
+  }
+
+  .image-container {
+    position: relative;
+    left: -10%;
+  }
+
+  .section-four-extra-features {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  .five {
+    grid-auto-flow: column;
+  }
+
+  .five img {
+    /* margin: auto 0; */
+    align-items: center;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-auto-flow: column;
+  }
+  ul {
+    text-align: left;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: auto 0;
+  }
+
+  .foot-icon {
+    margin: auto auto;
+  }
+}
+
+@media (min-width: 75em) {
+  body {
+    font-size: 1.2rem;
+  }
+  .five img {
+    padding-left: 8rem;
+  }
+}
